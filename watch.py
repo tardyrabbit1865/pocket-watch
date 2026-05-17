@@ -1,7 +1,10 @@
 import time
+import sys
 
 # what time i was SUPPOSED to be there
 due = "12:00"
+if len(sys.argv) > 1:
+    due = sys.argv[1]  # prob should check this is a real time but eh
 
 def chk():
     now = time.strftime("%H:%M")
